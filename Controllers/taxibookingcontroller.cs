@@ -20,14 +20,16 @@ namespace TaxiBookingService
     private readonly ILogger<TaxiBookingController> _logger;
     private readonly IModel _channel;
     private string CSVPath = string.Empty;
+    private string RHQHN = string.Empty;
 
 
     public TaxiBookingController(ILogger<TaxiBookingController> logger, IConfiguration configuration)
     {
         CSVPath = configuration["CSVPath"] ?? string.Empty;
+        RHQHN = configuration["RMQHN"] ?? string.Empty;
         _logger = logger;
          // Opret forbindelse til RabbitMQ
-        var factory = new ConnectionFactory() { HostName = "localhost" };
+        var factory = new ConnectionFactory() { HostName = RHQHN };
         var connection = factory.CreateConnection();
         _channel = connection.CreateModel();
     }
