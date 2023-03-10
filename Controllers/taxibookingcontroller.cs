@@ -19,9 +19,12 @@ namespace TaxiBookingService
 
     private readonly ILogger<TaxiBookingController> _logger;
     private readonly IModel _channel;
+    private string CSVPath = string.Empty;
 
-    public TaxiBookingController(ILogger<TaxiBookingController> logger)
+
+    public TaxiBookingController(ILogger<TaxiBookingController> logger, IConfiguration configuration)
     {
+        CSVPath = configuration["CSVPath"] ?? string.Empty;
         _logger = logger;
          // Opret forbindelse til RabbitMQ
         var factory = new ConnectionFactory() { HostName = "localhost" };
@@ -100,8 +103,6 @@ public IActionResult AddBooking(PlanDTO bookingDTO, ILogger<TaxiBookingControlle
             // Lav en tom liste af DTO'er, der repræsenterer planen
             List<PlanDTO> OrderedPlanList = bookings.OrderBy(b=> b.Starttidspunkt).ToList();
 
-        
-
             // Returnér listen af DTO'er, der repræsenterer planen
             return OrderedPlanList;
         }
@@ -110,10 +111,9 @@ public IActionResult AddBooking(PlanDTO bookingDTO, ILogger<TaxiBookingControlle
         private List<PlanDTO> GetBookingsDTOs()
         {
             // Kode til at hente bookinger fra CSV
-            string path = "../Planningservice/test.csv";
             CSVService csvservice = new CSVService();
             List<PlanDTO> fulllist = new List<PlanDTO>();
-            fulllist = csvservice.ReadCSV(path);
+            fulllist = csvservice.ReadCSV(CSVPath);
 
             //tjekker om der blev hentet noget, hvis ikke returnere den noget seeddata
             if(fulllist.Count < 1){
@@ -139,5 +139,20 @@ public IActionResult AddBooking(PlanDTO bookingDTO, ILogger<TaxiBookingControlle
                 return fulllist;
             }
         }
+
+// Endepunkt som læser det interne metadata indhold fra jeres .NETassembly og sender det til en REST-klient.
+    [HttpGet("version")]
+        public IEnumerable<string> Get()
+        {
+        var properties = new List<string>();
+        var assembly = typeof(Program).Assembly;
+        foreach (var attribute in assembly.GetCustomAttributesData())
+        {
+        properties.Add($"{attribute.AttributeType.Name} - {attribute.ToString()}");
+        }
+        return properties;
+        }
+
     }
+
 }
