@@ -36,7 +36,7 @@ namespace TaxiBookingService
 
         // Angiver HTTP, og ruten til handlingen, der tilføjer en booking
     [HttpPost("booking")]
-public IActionResult AddBooking(PlanDTO bookingDTO, ILogger<TaxiBookingController> logger)
+public IActionResult AddBooking([FromBody]PlanDTO bookingDTO)
 {
     try
     {
@@ -67,14 +67,14 @@ public IActionResult AddBooking(PlanDTO bookingDTO, ILogger<TaxiBookingControlle
                                  mandatory: true,
                                  basicProperties: null,
                                  body: body);
-            logger.LogInformation("Booking sent to RabbitMQ");
+            _logger.LogInformation("Booking sent to RabbitMQ");
         }
 
         return Ok();
     }
     catch (Exception ex)
     {
-        logger.LogError(ex, "Error while adding booking");
+        _logger.LogError(ex, "Error while adding booking");
         return StatusCode(500);
     }
 }
