@@ -146,6 +146,7 @@ public IActionResult AddBooking(PlanDTO bookingDTO, ILogger<TaxiBookingControlle
     [HttpGet("version")]
         public IEnumerable<string> Get()
         {
+        _logger.LogInformation("Metoden er blevet kaldt");
         var properties = new List<string>();
         var assembly = typeof(Program).Assembly;
         foreach (var attribute in assembly.GetCustomAttributesData())
