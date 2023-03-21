@@ -146,6 +146,7 @@ public IActionResult AddBooking([FromBody]PlanDTO bookingDTO)
     [HttpGet("version")]
         public IEnumerable<string> Get()
         {
+        _logger.LogInformation("Metoden er blevet kaldt WUHUHU tjek git");
         var properties = new List<string>();
         var assembly = typeof(Program).Assembly;
         foreach (var attribute in assembly.GetCustomAttributesData())
