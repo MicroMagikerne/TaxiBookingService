@@ -6,6 +6,8 @@ using TaxabookingService.Models;
 using System.Text;
 using RabbitMQ.Client;
 using System.Text.Json;
+using Microsoft.Extensions.Configuration;
+
 
 
 // Namespace for hele projektet
@@ -17,67 +19,96 @@ namespace TaxiBookingService
     public class TaxiBookingController : ControllerBase
     {
 
-    private readonly ILogger<TaxiBookingController> _logger;
-    private readonly IModel _channel;
-    private string CSVPath = string.Empty;
-    private string RHQHN = string.Empty;
+        private readonly ILogger<TaxiBookingController> _logger;
+        private readonly IModel _channel;
+        private string CSVPath = string.Empty;
+        private string RHQHN = string.Empty;
 
 
-    public TaxiBookingController(ILogger<TaxiBookingController> logger, IConfiguration configuration)
-    {
-        CSVPath = configuration["CSVPath"] ?? string.Empty;
-        RHQHN = configuration["RMQHN"] ?? string.Empty;
-        _logger = logger;
-         // Opret forbindelse til RabbitMQ
-        var factory = new ConnectionFactory() { HostName = RHQHN };
-        var connection = factory.CreateConnection();
-        _channel = connection.CreateModel();
-    }
+        public TaxiBookingController(ILogger<TaxiBookingController> logger, IConfiguration configuration)
+        {
+            CSVPath = configuration["CSVPath"] ?? string.Empty;
+            RHQHN = configuration["RHQHN"] ?? string.Empty;
+            _logger = logger;
+            _logger.LogInformation($"rabbitmq hostname sat til {RHQHN}");
+            // Opret forbindelse til RabbitMQ
+            var factory = new ConnectionFactory() { HostName = RHQHN };
+            var connection = factory.CreateConnection();
+            _channel = connection.CreateModel();
+
+
+           /* try
+            {
+                */
+                //punkt c.1
+                // Få værtsnavnet for den aktuelle maskine
+                var hostName = System.Net.Dns.GetHostName();
+
+                // Få en liste over IP-adresser, der er tildelt til værtsnavnet
+
+                var ips = System.Net.Dns.GetHostAddresses(hostName);
+
+
+                // Vælg den første IP-adresse fra listen og konverter den til en IPv4-adresse
+                var _ipaddr = ips.First().MapToIPv4().ToString();
+                // Log en informationsmeddelelse, der indikerer, at programmet kører på den aktuelle IP-adresse
+                _logger.LogInformation(1, $"Taxabooking svarer fra {_ipaddr}");
+
+/*
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message);
+            }
+*/
+        }
+        
+
 
         // Angiver HTTP, og ruten til handlingen, der tilføjer en booking
-    [HttpPost("booking")]
-public IActionResult AddBooking(PlanDTO bookingDTO, ILogger<TaxiBookingController> logger)
-{
-    try
-    {
-        // Kode til at tilføje booking
-        var newBooking = new PlanDTO
+        [HttpPost("booking")]
+        public IActionResult AddBooking(PlanDTO bookingDTO, ILogger<TaxiBookingController> logger)
         {
-            Kundenavn = bookingDTO.Kundenavn,
-            Starttidspunkt = bookingDTO.Starttidspunkt,
-            Startsted = bookingDTO.Startsted,
-            Slutsted = bookingDTO.Slutsted
-        };
+            try
+            {
+                // Kode til at tilføje booking
+                var newBooking = new PlanDTO
+                {
+                    Kundenavn = bookingDTO.Kundenavn,
+                    Starttidspunkt = bookingDTO.Starttidspunkt,
+                    Startsted = bookingDTO.Startsted,
+                    Slutsted = bookingDTO.Slutsted
+                };
 
-       
-        {
-            // Declare køen, hvis den ikke allerede findes
-            _channel.QueueDeclare(queue: "booking_queue",
-                                 durable: false,
-                                 exclusive: false,
-                                 autoDelete: false,
-                                 arguments: null);
 
-   
-            var body = JsonSerializer.SerializeToUtf8Bytes(newBooking);
+                {
+                    // Declare køen, hvis den ikke allerede findes
+                    _channel.QueueDeclare(queue: "booking_queue",
+                                         durable: false,
+                                         exclusive: false,
+                                         autoDelete: false,
+                                         arguments: null);
 
-            // Publicer beskeden til køen
-            _channel.BasicPublish(exchange: "",
-                                 routingKey: "booking_queue",
-                                 mandatory: true,
-                                 basicProperties: null,
-                                 body: body);
-            logger.LogInformation("Booking sent to RabbitMQ");
+
+                    var body = JsonSerializer.SerializeToUtf8Bytes(newBooking);
+
+                    // Publicer beskeden til køen
+                    _channel.BasicPublish(exchange: "",
+                                         routingKey: "booking_queue",
+                                         mandatory: true,
+                                         basicProperties: null,
+                                         body: body);
+                    logger.LogInformation("Booking sent to RabbitMQ");
+                }
+
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex, "Error while adding booking");
+                return StatusCode(500);
+            }
         }
-
-        return Ok();
-    }
-    catch (Exception ex)
-    {
-        logger.LogError(ex, "Error while adding booking");
-        return StatusCode(500);
-    }
-}
 
         // Angiv HTTP og ruten til handlingen, der genererer en plan over alle bookinger
         [HttpGet("plan")]
@@ -103,7 +134,7 @@ public IActionResult AddBooking(PlanDTO bookingDTO, ILogger<TaxiBookingControlle
             var bookings = GetBookingsDTOs();
 
             // Lav en tom liste af DTO'er, der repræsenterer planen
-            List<PlanDTO> OrderedPlanList = bookings.OrderBy(b=> b.Starttidspunkt).ToList();
+            List<PlanDTO> OrderedPlanList = bookings.OrderBy(b => b.Starttidspunkt).ToList();
 
             // Returnér listen af DTO'er, der repræsenterer planen
             return OrderedPlanList;
@@ -118,7 +149,8 @@ public IActionResult AddBooking(PlanDTO bookingDTO, ILogger<TaxiBookingControlle
             fulllist = csvservice.ReadCSV(CSVPath);
 
             //tjekker om der blev hentet noget, hvis ikke returnere den noget seeddata
-            if(fulllist.Count < 1){
+            if (fulllist.Count < 1)
+            {
                 return new List<PlanDTO>
                 {
                     new PlanDTO
@@ -137,23 +169,24 @@ public IActionResult AddBooking(PlanDTO bookingDTO, ILogger<TaxiBookingControlle
                     }
                 };
             }
-            else{
+            else
+            {
                 return fulllist;
             }
         }
 
-// Endepunkt som læser det interne metadata indhold fra jeres .NETassembly og sender det til en REST-klient.
-    [HttpGet("version")]
+        // Endepunkt som læser det interne metadata indhold fra jeres .NETassembly og sender det til en REST-klient.
+        [HttpGet("version")]
         public IEnumerable<string> Get()
         {
-        _logger.LogInformation("Metoden er blevet kaldt WUHUHU tjek git");
-        var properties = new List<string>();
-        var assembly = typeof(Program).Assembly;
-        foreach (var attribute in assembly.GetCustomAttributesData())
-        {
-        properties.Add($"{attribute.AttributeType.Name} - {attribute.ToString()}");
-        }
-        return properties;
+            _logger.LogInformation("Metoden er blevet kaldt WUHUHU tjek git");
+            var properties = new List<string>();
+            var assembly = typeof(Program).Assembly;
+            foreach (var attribute in assembly.GetCustomAttributesData())
+            {
+                properties.Add($"{attribute.AttributeType.Name} - {attribute.ToString()}");
+            }
+            return properties;
         }
 
     }
