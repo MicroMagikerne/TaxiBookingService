@@ -1,0 +1,161 @@
+2023-03-28 14:25:13 data-vault_dev-1  | Error parsing listener configuration.
+2023-03-28 14:25:13 data-vault_dev-1  | Error initializing listener of type tcp: error loading TLS cert: open /data/cert.pem: no such file or directory
+2023-03-28 14:25:13 data-vault_dev-1  | 2023-03-28T12:25:13.106Z [INFO]  proxy environment: http_proxy="" https_proxy="" no_proxy=""
+2023-03-28 14:25:13 data-vault_dev-1  | 2023-03-28T12:25:13.106Z [WARN]  no `api_addr` value specified in config or in VAULT_API_ADDR; falling back to detection if possible, but this value should be manually set
+2023-03-28 14:25:13 data-vault_dev-1  | 2023-03-28T12:25:13.107Z [INFO]  core: Initializing version history cache for core
+2023-03-28 14:25:13 data-vault_dev-1  | Error parsing listener configuration.
+2023-03-28 14:25:13 data-vault_dev-1  | Error initializing listener of type tcp: error loading TLS cert: open /data/cert.pem: no such file or directory
+2023-03-28 14:25:13 data-vault_dev-1  | 2023-03-28T12:25:13.927Z [INFO]  proxy environment: http_proxy="" https_proxy="" no_proxy=""
+2023-03-28 14:25:13 data-vault_dev-1  | 2023-03-28T12:25:13.927Z [WARN]  no `api_addr` value specified in config or in VAULT_API_ADDR; falling back to detection if possible, but this value should be manually set
+2023-03-28 14:25:13 data-vault_dev-1  | 2023-03-28T12:25:13.928Z [INFO]  core: Initializing version history cache for core
+2023-03-28 14:25:14 data-vault_dev-1  | 2023-03-28T12:25:14.760Z [INFO]  proxy environment: http_proxy="" https_proxy="" no_proxy=""
+2023-03-28 14:25:14 data-vault_dev-1  | 2023-03-28T12:25:14.760Z [WARN]  no `api_addr` value specified in config or in VAULT_API_ADDR; falling back to detection if possible, but this value should be manually set
+2023-03-28 14:25:14 data-vault_dev-1  | 2023-03-28T12:25:14.760Z [INFO]  core: Initializing version history cache for core
+2023-03-28 14:25:14 data-vault_dev-1  | Error parsing listener configuration.
+2023-03-28 14:25:14 data-vault_dev-1  | Error initializing listener of type tcp: error loading TLS cert: open /data/cert.pem: no such file or directory
+2023-03-28 14:25:15 data-vault_dev-1  | Error parsing listener configuration.
+2023-03-28 14:25:15 data-vault_dev-1  | Error initializing listener of type tcp: error loading TLS cert: open /data/cert.pem: no such file or directory
+2023-03-28 14:25:15 data-vault_dev-1  | 2023-03-28T12:25:15.565Z [INFO]  proxy environment: http_proxy="" https_proxy="" no_proxy=""
+2023-03-28 14:25:15 data-vault_dev-1  | 2023-03-28T12:25:15.565Z [WARN]  no `api_addr` value specified in config or in VAULT_API_ADDR; falling back to detection if possible, but this value should be manually set
+2023-03-28 14:25:15 data-vault_dev-1  | 2023-03-28T12:25:15.566Z [INFO]  core: Initializing version history cache for core
+2023-03-28 14:25:16 data-vault_dev-1  | Error parsing listener configuration.
+2023-03-28 14:25:16 data-vault_dev-1  | Error initializing listener of type tcp: error loading TLS cert: open /data/cert.pem: no such file or directory
+2023-03-28 14:25:16 data-vault_dev-1  | 2023-03-28T12:25:16.734Z [INFO]  proxy environment: http_proxy="" https_proxy="" no_proxy=""
+2023-03-28 14:25:16 data-vault_dev-1  | 2023-03-28T12:25:16.734Z [WARN]  no `api_addr` value specified in config or in VAULT_API_ADDR; falling back to detection if possible, but this value should be manually set
+2023-03-28 14:25:16 data-vault_dev-1  | 2023-03-28T12:25:16.735Z [INFO]  core: Initializing version history cache for core
+2023-03-28 14:25:18 data-vault_dev-1  | 2023-03-28T12:25:18.730Z [INFO]  proxy environment: http_proxy="" https_proxy="" no_proxy=""
+2023-03-28 14:25:18 data-vault_dev-1  | 2023-03-28T12:25:18.730Z [WARN]  no `api_addr` value specified in config or in VAULT_API_ADDR; falling back to detection if possible, but this value should be manually set
+2023-03-28 14:25:18 data-vault_dev-1  | 2023-03-28T12:25:18.730Z [INFO]  core: Initializing version history cache for core
+2023-03-28 14:25:18 data-vault_dev-1  | Error parsing listener configuration.
+2023-03-28 14:25:18 data-vault_dev-1  | Error initializing listener of type tcp: error loading TLS cert: open /data/cert.pem: no such file or directory
+2023-03-28 14:25:22 data-vault_dev-1  | Error parsing listener configuration.
+2023-03-28 14:25:22 data-vault_dev-1  | Error initializing listener of type tcp: error loading TLS cert: open /data/cert.pem: no such file or directory
+2023-03-28 14:25:22 data-vault_dev-1  | 2023-03-28T12:25:22.450Z [INFO]  proxy environment: http_proxy="" https_proxy="" no_proxy=""
+2023-03-28 14:25:22 data-vault_dev-1  | 2023-03-28T12:25:22.450Z [WARN]  no `api_addr` value specified in config or in VAULT_API_ADDR; falling back to detection if possible, but this value should be manually set
+2023-03-28 14:25:22 data-vault_dev-1  | 2023-03-28T12:25:22.451Z [INFO]  core: Initializing version history cache for core
+2023-03-28 14:25:29 data-vault_dev-1  | Error parsing listener configuration.
+2023-03-28 14:25:29 data-vault_dev-1  | Error initializing listener of type tcp: error loading TLS cert: open /data/cert.pem: no such file or directory
+2023-03-28 14:25:29 data-vault_dev-1  | 2023-03-28T12:25:29.243Z [INFO]  proxy environment: http_proxy="" https_proxy="" no_proxy=""
+2023-03-28 14:25:29 data-vault_dev-1  | 2023-03-28T12:25:29.244Z [WARN]  no `api_addr` value specified in config or in VAULT_API_ADDR; falling back to detection if possible, but this value should be manually set
+2023-03-28 14:25:29 data-vault_dev-1  | 2023-03-28T12:25:29.245Z [INFO]  core: Initializing version history cache for core
+2023-03-28 14:25:42 data-vault_dev-1  | 2023-03-28T12:25:42.495Z [INFO]  proxy environment: http_proxy="" https_proxy="" no_proxy=""
+2023-03-28 14:25:42 data-vault_dev-1  | 2023-03-28T12:25:42.495Z [WARN]  no `api_addr` value specified in config or in VAULT_API_ADDR; falling back to detection if possible, but this value should be manually set
+2023-03-28 14:25:42 data-vault_dev-1  | 2023-03-28T12:25:42.496Z [INFO]  core: Initializing version history cache for core
+2023-03-28 14:25:42 data-vault_dev-1  | Error parsing listener configuration.
+2023-03-28 14:25:42 data-vault_dev-1  | Error initializing listener of type tcp: error loading TLS cert: open /data/cert.pem: no such file or directory
+2023-03-28 14:26:08 data-vault_dev-1  | 2023-03-28T12:26:08.550Z [INFO]  proxy environment: http_proxy="" https_proxy="" no_proxy=""
+2023-03-28 14:26:08 data-vault_dev-1  | 2023-03-28T12:26:08.550Z [WARN]  no `api_addr` value specified in config or in VAULT_API_ADDR; falling back to detection if possible, but this value should be manually set
+2023-03-28 14:26:08 data-vault_dev-1  | 2023-03-28T12:26:08.550Z [INFO]  core: Initializing version history cache for core
+2023-03-28 14:26:08 data-vault_dev-1  | Error parsing listener configuration.
+2023-03-28 14:26:08 data-vault_dev-1  | Error initializing listener of type tcp: error loading TLS cert: open /data/cert.pem: no such file or directory
+2023-03-28 14:27:00 data-vault_dev-1  | Error parsing listener configuration.
+2023-03-28 14:27:00 data-vault_dev-1  | Error initializing listener of type tcp: error loading TLS cert: open /data/cert.pem: no such file or directory
+2023-03-28 14:27:00 data-vault_dev-1  | 2023-03-28T12:27:00.234Z [INFO]  proxy environment: http_proxy="" https_proxy="" no_proxy=""
+2023-03-28 14:27:00 data-vault_dev-1  | 2023-03-28T12:27:00.235Z [WARN]  no `api_addr` value specified in config or in VAULT_API_ADDR; falling back to detection if possible, but this value should be manually set
+2023-03-28 14:27:00 data-vault_dev-1  | 2023-03-28T12:27:00.236Z [INFO]  core: Initializing version history cache for core
+2023-03-28 14:27:10 data-vault_dev-1  | Error parsing listener configuration.
+2023-03-28 14:27:10 data-vault_dev-1  | Error initializing listener of type tcp: error loading TLS cert: open /data/cert.pem: no such file or directory
+2023-03-28 14:27:10 data-vault_dev-1  | 2023-03-28T12:27:10.995Z [INFO]  proxy environment: http_proxy="" https_proxy="" no_proxy=""
+2023-03-28 14:27:10 data-vault_dev-1  | 2023-03-28T12:27:10.996Z [WARN]  no `api_addr` value specified in config or in VAULT_API_ADDR; falling back to detection if possible, but this value should be manually set
+2023-03-28 14:27:10 data-vault_dev-1  | 2023-03-28T12:27:10.996Z [INFO]  core: Initializing version history cache for core
+2023-03-28 14:27:11 data-vault_dev-1  | 2023-03-28T12:27:11.435Z [INFO]  proxy environment: http_proxy="" https_proxy="" no_proxy=""
+2023-03-28 14:27:11 data-vault_dev-1  | 2023-03-28T12:27:11.436Z [WARN]  no `api_addr` value specified in config or in VAULT_API_ADDR; falling back to detection if possible, but this value should be manually set
+2023-03-28 14:27:11 data-vault_dev-1  | 2023-03-28T12:27:11.436Z [INFO]  core: Initializing version history cache for core
+2023-03-28 14:27:11 data-vault_dev-1  | Error parsing listener configuration.
+2023-03-28 14:27:11 data-vault_dev-1  | Error initializing listener of type tcp: error loading TLS cert: open /data/cert.pem: no such file or directory
+2023-03-28 14:27:11 data-vault_dev-1  | 2023-03-28T12:27:11.966Z [INFO]  proxy environment: http_proxy="" https_proxy="" no_proxy=""
+2023-03-28 14:27:11 data-vault_dev-1  | 2023-03-28T12:27:11.966Z [WARN]  no `api_addr` value specified in config or in VAULT_API_ADDR; falling back to detection if possible, but this value should be manually set
+2023-03-28 14:27:11 data-vault_dev-1  | 2023-03-28T12:27:11.967Z [INFO]  core: Initializing version history cache for core
+2023-03-28 14:27:11 data-vault_dev-1  | Error parsing listener configuration.
+2023-03-28 14:27:11 data-vault_dev-1  | Error initializing listener of type tcp: error loading TLS cert: open /data/cert.pem: no such file or directory
+2023-03-28 14:27:12 data-vault_dev-1  | 2023-03-28T12:27:12.726Z [INFO]  proxy environment: http_proxy="" https_proxy="" no_proxy=""
+2023-03-28 14:27:12 data-vault_dev-1  | 2023-03-28T12:27:12.727Z [WARN]  no `api_addr` value specified in config or in VAULT_API_ADDR; falling back to detection if possible, but this value should be manually set
+2023-03-28 14:27:12 data-vault_dev-1  | 2023-03-28T12:27:12.728Z [INFO]  core: Initializing version history cache for core
+2023-03-28 14:27:12 data-vault_dev-1  | Error parsing listener configuration.
+2023-03-28 14:27:12 data-vault_dev-1  | Error initializing listener of type tcp: error loading TLS cert: open /data/cert.pem: no such file or directory
+2023-03-28 14:27:13 data-vault_dev-1  | 2023-03-28T12:27:13.904Z [INFO]  proxy environment: http_proxy="" https_proxy="" no_proxy=""
+2023-03-28 14:27:13 data-vault_dev-1  | 2023-03-28T12:27:13.905Z [WARN]  no `api_addr` value specified in config or in VAULT_API_ADDR; falling back to detection if possible, but this value should be manually set
+2023-03-28 14:27:13 data-vault_dev-1  | 2023-03-28T12:27:13.905Z [INFO]  core: Initializing version history cache for core
+2023-03-28 14:27:13 data-vault_dev-1  | Error parsing listener configuration.
+2023-03-28 14:27:13 data-vault_dev-1  | Error initializing listener of type tcp: error loading TLS cert: open /data/cert.pem: no such file or directory
+2023-03-28 14:27:15 data-vault_dev-1  | Error parsing listener configuration.
+2023-03-28 14:27:15 data-vault_dev-1  | Error initializing listener of type tcp: error loading TLS cert: open /data/cert.pem: no such file or directory
+2023-03-28 14:27:15 data-vault_dev-1  | 2023-03-28T12:27:15.896Z [INFO]  proxy environment: http_proxy="" https_proxy="" no_proxy=""
+2023-03-28 14:27:15 data-vault_dev-1  | 2023-03-28T12:27:15.896Z [WARN]  no `api_addr` value specified in config or in VAULT_API_ADDR; falling back to detection if possible, but this value should be manually set
+2023-03-28 14:27:15 data-vault_dev-1  | 2023-03-28T12:27:15.897Z [INFO]  core: Initializing version history cache for core
+2023-03-28 14:27:19 data-vault_dev-1  | Error parsing listener configuration.
+2023-03-28 14:27:19 data-vault_dev-1  | Error initializing listener of type tcp: error loading TLS cert: open /data/cert.pem: no such file or directory
+2023-03-28 14:27:19 data-vault_dev-1  | 2023-03-28T12:27:19.462Z [INFO]  proxy environment: http_proxy="" https_proxy="" no_proxy=""
+2023-03-28 14:27:19 data-vault_dev-1  | 2023-03-28T12:27:19.462Z [WARN]  no `api_addr` value specified in config or in VAULT_API_ADDR; falling back to detection if possible, but this value should be manually set
+2023-03-28 14:27:19 data-vault_dev-1  | 2023-03-28T12:27:19.463Z [INFO]  core: Initializing version history cache for core
+2023-03-28 14:27:26 data-vault_dev-1  | Error parsing listener configuration.
+2023-03-28 14:27:26 data-vault_dev-1  | Error initializing listener of type tcp: error loading TLS cert: open /data/cert.pem: no such file or directory
+2023-03-28 14:27:26 data-vault_dev-1  | 2023-03-28T12:27:26.259Z [INFO]  proxy environment: http_proxy="" https_proxy="" no_proxy=""
+2023-03-28 14:27:26 data-vault_dev-1  | 2023-03-28T12:27:26.259Z [WARN]  no `api_addr` value specified in config or in VAULT_API_ADDR; falling back to detection if possible, but this value should be manually set
+2023-03-28 14:27:26 data-vault_dev-1  | 2023-03-28T12:27:26.259Z [INFO]  core: Initializing version history cache for core
+2023-03-28 14:27:39 data-vault_dev-1  | Error parsing listener configuration.
+2023-03-28 14:27:39 data-vault_dev-1  | Error initializing listener of type tcp: error loading TLS cert: open /data/cert.pem: no such file or directory
+2023-03-28 14:27:39 data-vault_dev-1  | 2023-03-28T12:27:39.537Z [INFO]  proxy environment: http_proxy="" https_proxy="" no_proxy=""
+2023-03-28 14:27:39 data-vault_dev-1  | 2023-03-28T12:27:39.537Z [WARN]  no `api_addr` value specified in config or in VAULT_API_ADDR; falling back to detection if possible, but this value should be manually set
+2023-03-28 14:27:39 data-vault_dev-1  | 2023-03-28T12:27:39.538Z [INFO]  core: Initializing version history cache for core
+2023-03-28 14:28:05 data-vault_dev-1  | 2023-03-28T12:28:05.661Z [INFO]  proxy environment: http_proxy="" https_proxy="" no_proxy=""
+2023-03-28 14:28:05 data-vault_dev-1  | 2023-03-28T12:28:05.661Z [WARN]  no `api_addr` value specified in config or in VAULT_API_ADDR; falling back to detection if possible, but this value should be manually set
+2023-03-28 14:28:05 data-vault_dev-1  | 2023-03-28T12:28:05.662Z [INFO]  core: Initializing version history cache for core
+2023-03-28 14:28:05 data-vault_dev-1  | Error parsing listener configuration.
+2023-03-28 14:28:05 data-vault_dev-1  | Error initializing listener of type tcp: error loading TLS cert: open /data/cert.pem: no such file or directory
+2023-03-28 14:28:57 data-vault_dev-1  | 2023-03-28T12:28:57.361Z [INFO]  proxy environment: http_proxy="" https_proxy="" no_proxy=""
+2023-03-28 14:28:57 data-vault_dev-1  | 2023-03-28T12:28:57.361Z [WARN]  no `api_addr` value specified in config or in VAULT_API_ADDR; falling back to detection if possible, but this value should be manually set
+2023-03-28 14:28:57 data-vault_dev-1  | 2023-03-28T12:28:57.362Z [INFO]  core: Initializing version history cache for core
+2023-03-28 14:28:57 data-vault_dev-1  | Error parsing listener configuration.
+2023-03-28 14:28:57 data-vault_dev-1  | Error initializing listener of type tcp: error loading TLS cert: open /data/cert.pem: no such file or directory
+2023-03-28 14:29:21 data-vault_dev-1  | 2023-03-28T12:29:21.877Z [INFO]  proxy environment: http_proxy="" https_proxy="" no_proxy=""
+2023-03-28 14:29:21 data-vault_dev-1  | 2023-03-28T12:29:21.877Z [WARN]  no `api_addr` value specified in config or in VAULT_API_ADDR; falling back to detection if possible, but this value should be manually set
+2023-03-28 14:29:21 data-vault_dev-1  | 2023-03-28T12:29:21.877Z [INFO]  core: Initializing version history cache for core
+2023-03-28 14:29:21 data-vault_dev-1  | Error parsing listener configuration.
+2023-03-28 14:29:21 data-vault_dev-1  | Error initializing listener of type tcp: error loading TLS cert: open /data/cert.pem: no such file or directory
+2023-03-28 14:29:22 data-vault_dev-1  | Error parsing listener configuration.
+2023-03-28 14:29:22 data-vault_dev-1  | Error initializing listener of type tcp: error loading TLS cert: open /data/cert.pem: no such file or directory
+2023-03-28 14:29:22 data-vault_dev-1  | 2023-03-28T12:29:22.322Z [INFO]  proxy environment: http_proxy="" https_proxy="" no_proxy=""
+2023-03-28 14:29:22 data-vault_dev-1  | 2023-03-28T12:29:22.322Z [WARN]  no `api_addr` value specified in config or in VAULT_API_ADDR; falling back to detection if possible, but this value should be manually set
+2023-03-28 14:29:22 data-vault_dev-1  | 2023-03-28T12:29:22.322Z [INFO]  core: Initializing version history cache for core
+2023-03-28 14:29:22 data-vault_dev-1  | Error parsing listener configuration.
+2023-03-28 14:29:22 data-vault_dev-1  | Error initializing listener of type tcp: error loading TLS cert: open /data/cert.pem: no such file or directory
+2023-03-28 14:29:22 data-vault_dev-1  | 2023-03-28T12:29:22.864Z [INFO]  proxy environment: http_proxy="" https_proxy="" no_proxy=""
+2023-03-28 14:29:22 data-vault_dev-1  | 2023-03-28T12:29:22.864Z [WARN]  no `api_addr` value specified in config or in VAULT_API_ADDR; falling back to detection if possible, but this value should be manually set
+2023-03-28 14:29:22 data-vault_dev-1  | 2023-03-28T12:29:22.864Z [INFO]  core: Initializing version history cache for core
+2023-03-28 14:29:23 data-vault_dev-1  | Error parsing listener configuration.
+2023-03-28 14:29:23 data-vault_dev-1  | Error initializing listener of type tcp: error loading TLS cert: open /data/cert.pem: no such file or directory
+2023-03-28 14:29:23 data-vault_dev-1  | 2023-03-28T12:29:23.615Z [INFO]  proxy environment: http_proxy="" https_proxy="" no_proxy=""
+2023-03-28 14:29:23 data-vault_dev-1  | 2023-03-28T12:29:23.615Z [WARN]  no `api_addr` value specified in config or in VAULT_API_ADDR; falling back to detection if possible, but this value should be manually set
+2023-03-28 14:29:23 data-vault_dev-1  | 2023-03-28T12:29:23.616Z [INFO]  core: Initializing version history cache for core
+2023-03-28 14:29:24 data-vault_dev-1  | 2023-03-28T12:29:24.780Z [INFO]  proxy environment: http_proxy="" https_proxy="" no_proxy=""
+2023-03-28 14:29:24 data-vault_dev-1  | 2023-03-28T12:29:24.780Z [WARN]  no `api_addr` value specified in config or in VAULT_API_ADDR; falling back to detection if possible, but this value should be manually set
+2023-03-28 14:29:24 data-vault_dev-1  | 2023-03-28T12:29:24.780Z [INFO]  core: Initializing version history cache for core
+2023-03-28 14:29:24 data-vault_dev-1  | Error parsing listener configuration.
+2023-03-28 14:29:24 data-vault_dev-1  | Error initializing listener of type tcp: error loading TLS cert: open /data/cert.pem: no such file or directory
+2023-03-28 14:29:26 data-vault_dev-1  | Error parsing listener configuration.
+2023-03-28 14:29:26 data-vault_dev-1  | Error initializing listener of type tcp: error loading TLS cert: open /data/cert.pem: no such file or directory
+2023-03-28 14:29:26 data-vault_dev-1  | 2023-03-28T12:29:26.739Z [INFO]  proxy environment: http_proxy="" https_proxy="" no_proxy=""
+2023-03-28 14:29:26 data-vault_dev-1  | 2023-03-28T12:29:26.739Z [WARN]  no `api_addr` value specified in config or in VAULT_API_ADDR; falling back to detection if possible, but this value should be manually set
+2023-03-28 14:29:26 data-vault_dev-1  | 2023-03-28T12:29:26.740Z [INFO]  core: Initializing version history cache for core
+2023-03-28 14:29:30 data-vault_dev-1  | 2023-03-28T12:29:30.298Z [INFO]  proxy environment: http_proxy="" https_proxy="" no_proxy=""
+2023-03-28 14:29:30 data-vault_dev-1  | 2023-03-28T12:29:30.298Z [WARN]  no `api_addr` value specified in config or in VAULT_API_ADDR; falling back to detection if possible, but this value should be manually set
+2023-03-28 14:29:30 data-vault_dev-1  | 2023-03-28T12:29:30.298Z [INFO]  core: Initializing version history cache for core
+2023-03-28 14:29:30 data-vault_dev-1  | Error parsing listener configuration.
+2023-03-28 14:29:30 data-vault_dev-1  | Error initializing listener of type tcp: error loading TLS cert: open /data/cert.pem: no such file or directory
+2023-03-28 14:29:37 data-vault_dev-1  | 2023-03-28T12:29:37.215Z [INFO]  proxy environment: http_proxy="" https_proxy="" no_proxy=""
+2023-03-28 14:29:37 data-vault_dev-1  | 2023-03-28T12:29:37.215Z [WARN]  no `api_addr` value specified in config or in VAULT_API_ADDR; falling back to detection if possible, but this value should be manually set
+2023-03-28 14:29:37 data-vault_dev-1  | 2023-03-28T12:29:37.215Z [INFO]  core: Initializing version history cache for core
+2023-03-28 14:29:37 data-vault_dev-1  | Error parsing listener configuration.
+2023-03-28 14:29:37 data-vault_dev-1  | Error initializing listener of type tcp: error loading TLS cert: open /data/cert.pem: no such file or directory
+1970-01-01 01:00:00 data-vault_dev-1 exited with code 1
+
+
+|-- passwords
+|   |-- rkk=1234
+|   |-- hn=3456
+|
+|-- connections
+|   |-- MongoDBServer3=mongodb://mongodb0.example.com:27017
+|
+|-- PostgresDB2="Server=127.0.0.1;Port=5432;Database=myDataBase;IntegratedSecurity=true;"
