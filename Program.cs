@@ -25,7 +25,7 @@ catch (Exception ex)
 finally
  {
      NLog.LogManager.Shutdown();
-    }
+ }
 
 var builder = WebApplication.CreateBuilder(args);
 
