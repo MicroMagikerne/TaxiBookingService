@@ -5,10 +5,11 @@ using NLog.Web;
 //punkt b.4 Tilføj fejl håndtering til Program.cs ved at pakke al koden ind i en try/catch/finally
 try
 {
+    
     // Indlæs NLog.config-konfigurationsfilen
     var logger = NLog.LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
     logger.Debug("init main");
-
+    logger.Info("jaja");
     // Resten af koden her
 
 }

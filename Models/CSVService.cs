@@ -21,6 +21,5 @@ return fulllist;
 public void AppendCSV(string path, PlanDTO newplan)
 {
     File.AppendAllText(path, $"{newplan.Kundenavn},{newplan.Starttidspunkt},{newplan.Startsted},{newplan.Slutsted}" + Environment.NewLine);
-
 }
 }
